@@ -4,39 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Campo de texto que funciona como visor da calculadora.
-    O atributo 'readonly' impede que o usuário digite manualmente -->
-    <input readonly type="text" id="visor"/>
+    <!-- Agrupa toda a calculadora para centralizar e aplicar o estilo do card -->
+    <div class="calculadora">
+        <!-- Campo de texto que funciona como visor da calculadora.
+        O atributo 'readonly' impede que o usuário digite manualmente -->
+        <input readonly type="text" id="visor"/>
 
-    <!-- Cada botão chama a função aparecerNoVisor() passando o valor clicado -->
-    <div>
-        <button onclick="aparecerNoVisor('1')">1</button>
-        <button onclick="aparecerNoVisor('2')">2</button>
-        <button onclick="aparecerNoVisor('3')">3</button>
-        <button onclick="aparecerNoVisor('+')">+</button>
-    </div>
+        <!-- Agrupa todos os botões para aplicar layout flexível -->
+        <div class="botoes">
+            <!-- Cada linha de botões -->
+            <div>
+                <button onclick="aparecerNoVisor('1')">1</button>
+                <button onclick="aparecerNoVisor('2')">2</button>
+                <button onclick="aparecerNoVisor('3')">3</button>
+                <button onclick="aparecerNoVisor('+')">+</button>
+            </div>
 
-    <div>
-        <button onclick="aparecerNoVisor('4')">4</button>
-        <button onclick="aparecerNoVisor('5')">5</button>
-        <button onclick="aparecerNoVisor('6')">6</button>
-        <button onclick="aparecerNoVisor('-')">-</button>
-    </div>
+            <div>
+                <button onclick="aparecerNoVisor('4')">4</button>
+                <button onclick="aparecerNoVisor('5')">5</button>
+                <button onclick="aparecerNoVisor('6')">6</button>
+                <button onclick="aparecerNoVisor('-')">-</button>
+            </div>
 
-    <div>
-        <button onclick="aparecerNoVisor('7')">7</button>
-        <button onclick="aparecerNoVisor('8')">8</button>
-        <button onclick="aparecerNoVisor('9')">9</button>
-        <button onclick="aparecerNoVisor('*')">*</button>
-    </div>
+            <div>
+                <button onclick="aparecerNoVisor('7')">7</button>
+                <button onclick="aparecerNoVisor('8')">8</button>
+                <button onclick="aparecerNoVisor('9')">9</button>
+                <button onclick="aparecerNoVisor('*')">×</button>
+            </div>
 
-    <div>
-        <button onclick="aparecerNoVisor('0')">0</button>
-        <button onclick="aparecerNoVisor('/')">/</button>
-        <button onclick="calcularResultado()">=</button>
-        <button onclick="limparVisor()">C</button>
+            <div>
+                <button onclick="aparecerNoVisor('0')">0</button>
+                <button onclick="aparecerNoVisor('/')">÷</button>
+                <button onclick="calcularResultado()">=</button>
+                <button onclick="limparVisor()">C</button>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>

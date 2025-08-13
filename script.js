@@ -25,7 +25,7 @@ function calcularResultado() {
     try { // Tenta avaliar a expressão no visor
         visor.value = eval(visor.value); // Avalia a expressão matemática
     } catch (error) { // Se ocorrer um erro na avaliação
-        visor.value = 'Erro'; // Exibe "Erro" no visor
+        visor.value = 'Erro!'; // Exibe "Erro" no visor
     }
 }
 
